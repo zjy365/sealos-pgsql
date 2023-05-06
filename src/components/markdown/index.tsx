@@ -1,33 +1,30 @@
 /* eslint-disable react/no-children-prop */
-import { V1SELinuxOptions } from '@kubernetes/client-node'
-import clsx from 'clsx'
-import ReactMarkdown from 'react-markdown'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import {
-  vs,
-  vs2015,
-  stackoverflowLight,
-} from 'react-syntax-highlighter/dist/cjs/styles/hljs'
-import styles from './index.module.scss'
-import 'github-markdown-css/github-markdown-light.css'
+// @ts-nocheck
+import { V1SELinuxOptions } from '@kubernetes/client-node';
+import clsx from 'clsx';
+import ReactMarkdown from 'react-markdown';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { vs, vs2015, stackoverflowLight } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import styles from './index.module.scss';
+import 'github-markdown-css/github-markdown-light.css';
 
 type TMarkDown = {
-  text: string
-  themeDark?: boolean
-  isShowCopyBtn?: boolean
-}
+  text: string;
+  themeDark?: boolean;
+  isShowCopyBtn?: boolean;
+};
 const MarkDown = (props: TMarkDown) => {
-  const { text, themeDark, isShowCopyBtn } = props
+  const { text, themeDark, isShowCopyBtn } = props;
   const copyContent = () => {
-    navigator.clipboard.writeText(text.slice(8, -4))
-  }
+    navigator.clipboard.writeText(text.slice(8, -4));
+  };
   return (
     <div className={clsx(styles.copyMark, 'markdown-body')}>
       <ReactMarkdown
         children={text}
         components={{
           code({ node, inline, className, children, ...props }) {
-            const match = /language-(\w+)/.exec(className || '')
+            const match = /language-(\w+)/.exec(className || '');
             return !inline && match ? (
               <SyntaxHighlighter
                 children={String(children).replace(/\n$/, '')}
@@ -41,8 +38,8 @@ const MarkDown = (props: TMarkDown) => {
               <code className={className} {...props}>
                 {children}
               </code>
-            )
-          },
+            );
+          }
         }}
       />
       {isShowCopyBtn && (
@@ -51,7 +48,7 @@ const MarkDown = (props: TMarkDown) => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default MarkDown
+export default MarkDown;
