@@ -1,86 +1,85 @@
-import { Dialog, DialogSurface, Spinner } from '@fluentui/react-components'
-import { useMutation } from '@tanstack/react-query'
-import clsx from 'clsx'
-import MarkDown from '@/components/markdown'
-import { useEffect, useState } from 'react'
-import { useFieldArray, useForm } from 'react-hook-form'
-import request from '@/services/request'
-import styles from './add_page.module.scss'
-import Button from './components/button'
+import { Dialog, DialogSurface, Spinner } from '@fluentui/react-components';
+import { useMutation } from '@tanstack/react-query';
+import clsx from 'clsx';
+import MarkDown from '@/components/markdown';
+import { useEffect, useState } from 'react';
+import { useFieldArray, useForm } from 'react-hook-form';
+import request from '@/services/request';
+import styles from './add_page.module.scss';
+import Button from './components/button';
 import {
   ControlledDropdown,
   ControlledNumberField,
-  ControlledTextField,
-} from './components/controlled_fluent'
-import { PageType, usePgSqlContext } from './index'
-import { generatePgsqlTemplate, TPgSqlForm } from './pgsql_common'
+  ControlledTextField
+} from './components/controlled_fluent';
+import { PageType, usePgSqlContext } from './index';
+import { generatePgsqlTemplate, TPgSqlForm } from './pgsql_common';
 
-function AddPage() {
-  const { toPage } = usePgSqlContext()
-  const [yamlTemplate, setYamlTemplate] = useState('')
+export default function AddPage() {
+  const { toPage } = usePgSqlContext();
+  const [yamlTemplate, setYamlTemplate] = useState('');
 
-  const { handleSubmit, control, formState, watch, getValues } =
-    useForm<TPgSqlForm>({
-      defaultValues: {
-        pgsqlName: '',
-        version: '14',
-        instance: '1',
-        volumeSize: '1',
-        iops: '3000',
-        througput: '125',
-        limits: {
-          cpu: '300',
-          memory: '300',
-        },
-        dataBases: [{ name: 'rootdb', user: 'root' }],
-        users: [{ name: 'root', authority: 'superuser' }],
+  const { handleSubmit, control, formState, watch, getValues } = useForm<TPgSqlForm>({
+    defaultValues: {
+      pgsqlName: '',
+      version: '14',
+      instance: '1',
+      volumeSize: '1',
+      iops: '3000',
+      througput: '125',
+      limits: {
+        cpu: '300',
+        memory: '300'
       },
-      reValidateMode: 'onSubmit',
-      mode: 'all',
-    })
+      dataBases: [{ name: 'rootdb', user: 'root' }],
+      users: [{ name: 'root', authority: 'superuser' }]
+    },
+    reValidateMode: 'onSubmit',
+    mode: 'all'
+  });
 
   const {
     fields: userArr,
     append,
-    remove,
-  } = useFieldArray({ control, name: 'users', rules: { required: true } })
+    remove
+  } = useFieldArray({ control, name: 'users', rules: { required: true } });
   const {
     fields: dataBaseArr,
     append: dataBaseAppend,
-    remove: dataBaseRemove,
-  } = useFieldArray({ control, name: 'dataBases', rules: { required: true } })
+    remove: dataBaseRemove
+  } = useFieldArray({ control, name: 'dataBases', rules: { required: true } });
 
   useEffect(() => {
-    setYamlTemplate(generatePgsqlTemplate(formState.defaultValues))
-  }, [formState.defaultValues])
+    setYamlTemplate(generatePgsqlTemplate(formState.defaultValues));
+  }, [formState.defaultValues]);
 
   watch((data: TPgSqlForm | any) => {
-    setYamlTemplate(generatePgsqlTemplate(data))
-  })
+    setYamlTemplate(generatePgsqlTemplate(data));
+  });
 
   const createPgsqlMutation = useMutation({
     mutationFn: (data: TPgSqlForm) => {
-      return request.post('/api/pgsql/applyPgsql', { data })
+      return request.post('/api/pgsql/applyPgsql', { data });
     },
     onSettled: () => {
-      toPage(PageType.FrontPage)
-    },
-  })
+      toPage(PageType.FrontPage);
+    }
+  });
 
   const onSave = () => {
     handleSubmit(
       (data: TPgSqlForm) => {
-        createPgsqlMutation.mutate(data)
+        createPgsqlMutation.mutate(data);
       },
       (err: any) => {
-        console.log(err)
+        console.log(err);
       }
-    )()
-  }
+    )();
+  };
 
   const copyYaml = () => {
-    navigator.clipboard.writeText(yamlTemplate.slice(8, -4))
-  }
+    navigator.clipboard.writeText(yamlTemplate.slice(8, -4));
+  };
 
   return (
     <div className={clsx(styles.pgsqlFrontPage, 'w-full h-full flex flex-col')}>
@@ -116,8 +115,8 @@ function AddPage() {
                       required: { value: true, message: 'this is required' },
                       pattern: {
                         value: /^[a-z0-9]+([-.][a-z0-9]+)*$/,
-                        message: 'error message',
-                      },
+                        message: 'error message'
+                      }
                     }}
                   />
                 </div>
@@ -134,18 +133,14 @@ function AddPage() {
                       { key: '13', content: '13' },
                       { key: '12', content: '12' },
                       { key: '11', content: '11' },
-                      { key: '10', content: '10' },
+                      { key: '10', content: '10' }
                     ]}
                   />
                 </div>
                 <div className="w-6"></div>
                 <div className="w-full">
                   <div className="mb-3">Number of instance</div>
-                  <ControlledNumberField
-                    control={control}
-                    name="instance"
-                    defaultValue={1}
-                  />
+                  <ControlledNumberField control={control} name="instance" defaultValue={1} />
                 </div>
               </div>
             </div>
@@ -160,8 +155,9 @@ function AddPage() {
                     type="lightBlue"
                     icon="/images/pgsql/add_blue.svg"
                     handleClick={() => {
-                      append({ name: '', authority: undefined })
-                    }}></Button>
+                      append({ name: '', authority: undefined });
+                    }}
+                  ></Button>
                 </div>
               </div>
               {/* @ts-ignore */}
@@ -172,7 +168,7 @@ function AddPage() {
                     name={`users.${index}.name`}
                     placeholder="user name"
                     rules={{
-                      required: { value: true, message: 'this is required' },
+                      required: { value: true, message: 'this is required' }
                     }}
                   />
                   <div className="w-6"></div>
@@ -191,7 +187,7 @@ function AddPage() {
                         { key: 'nologin', content: 'nologin' },
                         { key: 'createrole', content: 'createrole' },
                         { key: 'replication', content: 'replication' },
-                        { key: 'bypassrls', content: 'bypassrls' },
+                        { key: 'bypassrls', content: 'bypassrls' }
                       ]}
                     />
                   </div>
@@ -200,9 +196,10 @@ function AddPage() {
                       type="danger"
                       shape="round"
                       handleClick={() => {
-                        remove(index)
+                        remove(index);
                       }}
-                      icon={'/images/pgsql/delete.svg'}></Button>
+                      icon={'/images/pgsql/delete.svg'}
+                    ></Button>
                   </div>
                 </div>
               ))}
@@ -217,9 +214,10 @@ function AddPage() {
                     size="mini"
                     type="lightBlue"
                     handleClick={() => {
-                      dataBaseAppend({ name: '', user: '' })
+                      dataBaseAppend({ name: '', user: '' });
                     }}
-                    icon="/images/pgsql/add_blue.svg"></Button>
+                    icon="/images/pgsql/add_blue.svg"
+                  ></Button>
                 </div>
               </div>
               {/* @ts-ignore */}
@@ -230,7 +228,7 @@ function AddPage() {
                     name={`dataBases.${index}.name`}
                     placeholder="databases name ( 3-32 )"
                     rules={{
-                      required: { value: true, message: 'this is required' },
+                      required: { value: true, message: 'this is required' }
                     }}
                   />
 
@@ -242,7 +240,7 @@ function AddPage() {
                       defaultValue="root"
                       rules={{ required: true }}
                       options={getValues('users').map((i: any) => {
-                        return { key: i.name, content: i.name }
+                        return { key: i.name, content: i.name };
                       })}
                     />
                   </div>
@@ -251,9 +249,10 @@ function AddPage() {
                       type="danger"
                       shape="round"
                       handleClick={() => {
-                        dataBaseRemove(index)
+                        dataBaseRemove(index);
                       }}
-                      icon={'/images/pgsql/delete.svg'}></Button>
+                      icon={'/images/pgsql/delete.svg'}
+                    ></Button>
                   </div>
                 </div>
               ))}
@@ -265,30 +264,18 @@ function AddPage() {
               </div> */}
               <div className={clsx(styles.cardCpu, 'w-1/2')}>
                 <div className="mb-3">Cpu (m) </div>
-                <ControlledNumberField
-                  control={control}
-                  name="limits.cpu"
-                  defaultValue={300}
-                />
+                <ControlledNumberField control={control} name="limits.cpu" defaultValue={300} />
               </div>
               <div className="w-4"></div>
               <div className={clsx(styles.cardCpu, 'w-1/2')}>
                 <div className="mb-3">Memory (Mi)</div>
-                <ControlledNumberField
-                  control={control}
-                  name="limits.memory"
-                  defaultValue={300}
-                />
+                <ControlledNumberField control={control} name="limits.memory" defaultValue={300} />
               </div>
             </div>
             <div className={clsx(styles.cardVolume)}>
               <div className="flex p-6  items-center ">
                 <span className="mr-2 w-44"> Volume size (Gi)</span>
-                <ControlledNumberField
-                  control={control}
-                  name="volumeSize"
-                  defaultValue={1}
-                />
+                <ControlledNumberField control={control} name="volumeSize" defaultValue={1} />
               </div>
               {/* <div className={clsx(styles.cardIops)}>
                 <div className="w-1/2">
@@ -313,7 +300,8 @@ function AddPage() {
                 handleClick={() => copyYaml()}
                 type="lightBlue"
                 shape="squareRound"
-                icon="/images/pgsql/copy.svg"></Button>
+                icon="/images/pgsql/copy.svg"
+              ></Button>
             </div>
           </div>
           <div className={clsx(styles.scrollWrap, 'grow flex')}>
@@ -331,7 +319,5 @@ function AddPage() {
         </Dialog>
       </div>
     </div>
-  )
+  );
 }
-
-export default AddPage

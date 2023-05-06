@@ -9,13 +9,11 @@ html {
   // scrollbar-color: transparent transparent;
 }
 
-html body {
+html body #__next {
   width: 100vw;
   height: 100vh;
-}
-#__next {
-  height: 100%;
-  width: 100%;
+  // width: 100%;
+  // height: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -132,4 +130,21 @@ body::-webkit-scrollbar {
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
+}
+
+.appSize {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width: 864px) {
+  .appSize {
+    padding-left: 116px;
+    padding-right: 116px;
+  }
+}
+
+.fui-FluentProvider {
+  width: 100%;
+  height: 100%;
 }

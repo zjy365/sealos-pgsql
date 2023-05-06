@@ -1,4 +1,4 @@
-import Pgsql from '@/pages/pgsql/index';
+import Pgsql from '@/components/pgsql/index';
 import useSessionStore from '@/stores/session';
 import { useState, useEffect } from 'react';
 import { createSealosApp, sealosApp } from 'sealos-desktop-sdk/app';
@@ -24,5 +24,5 @@ export default function Index() {
     initApp();
   }, [setSession]);
 
-  return <div>saas</div>;
+  return <Pgsql />;
 }
