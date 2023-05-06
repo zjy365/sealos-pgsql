@@ -21,7 +21,6 @@ export default function Index() {
     const initApp = async () => {
       try {
         const result = await sealosApp.getSession();
-        console.log(result);
         setSession(result);
         setIsLoading(false);
       } catch (error) {
