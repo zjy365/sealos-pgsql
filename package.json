@@ -24,11 +24,13 @@
     "react-markdown": "^8.0.4",
     "react-syntax-highlighter": "^15.5.0",
     "sealos-desktop-sdk": "^0.1.12",
+    "github-markdown-css": "^5.1.0",
     "zustand": "^4.1.5",
     "next": "13.4.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.62.1",
+    "@kubernetes/client-node": "0.18.0",
     "typescript": "5.0.4"
   },
   "devDependencies": {

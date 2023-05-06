@@ -3,7 +3,6 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import { useState } from 'react'
 import request from '@/services/request'
-import useAppStore from 'stores/app'
 import useSessionStore from '@/stores/session'
 import { formatTime } from '@/utils/format'
 import ClusterInfo from './clusterInfo'
@@ -25,7 +24,6 @@ function FrontPage() {
   const [deletePgsqlVisible, setDeletePgsqlVisible] = useState(false)
   const [eventsDialogVisible, setEventsDialogVisible] = useState(false)
   const [pgsqlStatus, setPgsqlStatus] = useState('')
-  const { currentApp } = useAppStore()
 
   const {
     data: pgsqlLists,
@@ -79,11 +77,7 @@ function FrontPage() {
   }
   return (
     <div className={clsx(styles.pgsqlFrontPage, 'w-full h-full flex flex-col')}>
-      <div
-        className={clsx(
-          'flex pt-8 items-center',
-          currentApp?.size === 'maxmin' ? 'px-8' : 'px-40 '
-        )}>
+      <div className={clsx('flex pt-8 items-center', 'appSize')}>
         <div className={styles.logo}>
           <Image
             src="/images/pgsql/logo.svg"
