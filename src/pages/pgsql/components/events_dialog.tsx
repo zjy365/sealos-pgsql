@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import clsx from 'clsx';
-import Iconfont from 'components/iconfont';
-import request from 'services/request';
+import Iconfont from '@/components/iconfont';
+import request from '@/services/request';
 import Button from './button';
 import styles from './events_dialog.module.scss';
 

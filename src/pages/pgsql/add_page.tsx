@@ -5,7 +5,6 @@ import MarkDown from '@/components/markdown'
 import { useEffect, useState } from 'react'
 import { useFieldArray, useForm } from 'react-hook-form'
 import request from '@/services/request'
-import useAppStore from '@/stores/app'
 import styles from './add_page.module.scss'
 import Button from './components/button'
 import {
@@ -19,7 +18,6 @@ import { generatePgsqlTemplate, TPgSqlForm } from './pgsql_common'
 function AddPage() {
   const { toPage } = usePgSqlContext()
   const [yamlTemplate, setYamlTemplate] = useState('')
-  const { currentApp } = useAppStore()
 
   const { handleSubmit, control, formState, watch, getValues } =
     useForm<TPgSqlForm>({
@@ -86,11 +84,7 @@ function AddPage() {
 
   return (
     <div className={clsx(styles.pgsqlFrontPage, 'w-full h-full flex flex-col')}>
-      <div
-        className={clsx(
-          'pb-4 pt-8 flex items-center',
-          currentApp?.size === 'maxmin' ? 'px-8' : 'px-40'
-        )}>
+      <div className={clsx('pb-4 pt-8 flex items-center', 'appSize')}>
         <Button
           shape="squareRound"
           icon="/images/pgsql/detail_back.svg"
@@ -103,11 +97,7 @@ function AddPage() {
           </Button>
         </div>
       </div>
-      <div
-        className={clsx(
-          'flex-1 flex',
-          currentApp?.size === 'maxmin' ? 'mx-8' : 'mx-40'
-        )}>
+      <div className={clsx('flex-1 flex', 'appSize')}>
         <div className={clsx(styles.pgsqlFormScroll, 'mt-6')}>
           <div className={clsx('w-full absolute pb-6')}>
             <div className={styles.cardName}>

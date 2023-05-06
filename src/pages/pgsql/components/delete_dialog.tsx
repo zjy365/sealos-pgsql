@@ -10,7 +10,7 @@ import {
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import request from 'services/request';
+import request from '@/services/request';
 import Button from './button';
 import styles from './delete_dialog.module.scss';
 

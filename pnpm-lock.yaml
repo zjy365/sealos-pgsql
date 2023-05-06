@@ -1,9 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@fluentui/react-components': ^9.7.4
+  '@fluentui/react-components': 9.7.4
   '@kubernetes/client-node': 0.18.0
-  '@tanstack/react-query': ^4.20.4
+  '@next/font': ^13.1.1
+  '@tanstack/react-query': 4.20.4
+  '@types/js-yaml': ^4.0.5
+  '@types/lodash': ^4.14.191
   '@types/node': 18.16.3
   '@types/react': 18.2.5
   '@types/react-dom': 18.2.3
@@ -13,25 +16,29 @@ specifiers:
   dayjs: ^1.11.7
   eslint: 8.39.0
   eslint-config-next: 13.4.0
-  fast-json-patch: ^3.1.1
+  fast-json-patch: 3.1.1
   github-markdown-css: ^5.1.0
+  immer: 9.0.16
+  js-yaml: 4.1.0
   next: 13.4.0
   postcss: ^8.4.23
   react: 18.2.0
   react-dom: 18.2.0
-  react-hook-form: ^7.40.0
-  react-markdown: ^8.0.4
-  react-syntax-highlighter: ^15.5.0
+  react-hook-form: 7.40.0
+  react-markdown: 8.0.4
+  react-syntax-highlighter: 15.5.0
   sass: ^1.62.1
   sealos-desktop-sdk: ^0.1.12
   tailwindcss: ^3.3.2
+  ts-md5: 1.3.1
   typescript: 5.0.4
-  zustand: ^4.1.5
+  zustand: 4.1.5
 
 dependencies:
-  '@fluentui/react-components': registry.npmmirror.com/@fluentui/react-components/9.19.1_kuusov2leqnirz6kvocub7ct4e
+  '@fluentui/react-components': registry.npmmirror.com/@fluentui/react-components/9.7.4_kuusov2leqnirz6kvocub7ct4e
   '@kubernetes/client-node': registry.npmmirror.com/@kubernetes/client-node/0.18.0
-  '@tanstack/react-query': registry.npmmirror.com/@tanstack/react-query/4.29.5_biqbaboplfbrettd7655fr4n2y
+  '@next/font': registry.npmmirror.com/@next/font/13.4.1
+  '@tanstack/react-query': registry.npmmirror.com/@tanstack/react-query/4.20.4_biqbaboplfbrettd7655fr4n2y
   '@types/node': registry.npmmirror.com/@types/node/18.16.3
   '@types/react': registry.npmmirror.com/@types/react/18.2.5
   '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.2.3
@@ -42,18 +49,23 @@ dependencies:
   eslint-config-next: registry.npmmirror.com/eslint-config-next/13.4.0_iacogk7kkaymxepzhgcbytyi7q
   fast-json-patch: registry.npmmirror.com/fast-json-patch/3.1.1
   github-markdown-css: registry.npmmirror.com/github-markdown-css/5.2.0
+  immer: registry.npmmirror.com/immer/9.0.16
+  js-yaml: registry.npmmirror.com/js-yaml/4.1.0
   next: registry.npmmirror.com/next/13.4.0_txdvpvppf2ilsh27xadmwrzlmm
   react: registry.npmmirror.com/react/18.2.0
   react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
-  react-hook-form: registry.npmmirror.com/react-hook-form/7.43.9_react@18.2.0
-  react-markdown: registry.npmmirror.com/react-markdown/8.0.7_3pi6y6cylzraaxxtldk4o6b3zi
+  react-hook-form: registry.npmmirror.com/react-hook-form/7.40.0_react@18.2.0
+  react-markdown: registry.npmmirror.com/react-markdown/8.0.4_3pi6y6cylzraaxxtldk4o6b3zi
   react-syntax-highlighter: registry.npmmirror.com/react-syntax-highlighter/15.5.0_react@18.2.0
   sass: registry.npmmirror.com/sass/1.62.1
   sealos-desktop-sdk: registry.npmmirror.com/sealos-desktop-sdk/0.1.12
+  ts-md5: registry.npmmirror.com/ts-md5/1.3.1
   typescript: registry.npmmirror.com/typescript/5.0.4
-  zustand: registry.npmmirror.com/zustand/4.3.8_react@18.2.0
+  zustand: registry.npmmirror.com/zustand/4.1.5_immer@9.0.16+react@18.2.0
 
 devDependencies:
+  '@types/js-yaml': registry.npmmirror.com/@types/js-yaml/4.0.5
+  '@types/lodash': registry.npmmirror.com/@types/lodash/4.14.194
   autoprefixer: registry.npmmirror.com/autoprefixer/10.4.14_postcss@8.4.23
   postcss: registry.npmmirror.com/postcss/8.4.23
   tailwindcss: registry.npmmirror.com/tailwindcss/3.3.2
@@ -186,11 +198,11 @@ packages:
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
     dev: false
 
-  registry.npmmirror.com/@fluentui/react-alert/9.0.0-beta.45_kuusov2leqnirz6kvocub7ct4e:
-    resolution: {integrity: sha512-a+kQHOBppVh0kvNBcJeGvWC4Eu4vzWFDifyb+DYObeb5ZgwhxZQr9WwBn1QnoKX4FinWxj79yEPmNgWxu1WvDA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-alert/-/react-alert-9.0.0-beta.45.tgz}
-    id: registry.npmmirror.com/@fluentui/react-alert/9.0.0-beta.45
+  registry.npmmirror.com/@fluentui/react-alert/9.0.0-beta.21_kuusov2leqnirz6kvocub7ct4e:
+    resolution: {integrity: sha512-OOPIKyumwv6eYxZCivHFYm35flzZysdDEQUDjPlNgb6pmJqENxVts0Fi6GBgOX6ipRt+Codc5CEO2axF/MkqGQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-alert/-/react-alert-9.0.0-beta.21.tgz}
+    id: registry.npmmirror.com/@fluentui/react-alert/9.0.0-beta.21
     name: '@fluentui/react-alert'
-    version: 9.0.0-beta.45
+    version: 9.0.0-beta.21
     peerDependencies:
       '@types/react': '>=16.8.0 <19.0.0'
       '@types/react-dom': '>=16.8.0 <19.0.0'
@@ -200,16 +212,15 @@ packages:
       '@fluentui/react-avatar': registry.npmmirror.com/@fluentui/react-avatar/9.4.10_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-button': registry.npmmirror.com/@fluentui/react-button/9.3.10_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-icons': registry.npmmirror.com/@fluentui/react-icons/2.0.201_react@18.2.0
-      '@fluentui/react-jsx-runtime': registry.npmmirror.com/@fluentui/react-jsx-runtime/9.0.0-alpha.2_3pi6y6cylzraaxxtldk4o6b3zi
       '@fluentui/react-tabster': registry.npmmirror.com/@fluentui/react-tabster/9.6.5_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-theme': registry.npmmirror.com/@fluentui/react-theme/9.1.7
       '@fluentui/react-utilities': registry.npmmirror.com/@fluentui/react-utilities/9.8.0_3pi6y6cylzraaxxtldk4o6b3zi
       '@griffel/react': registry.npmmirror.com/@griffel/react/1.5.7_react@18.2.0
-      '@swc/helpers': registry.npmmirror.com/@swc/helpers/0.4.14
       '@types/react': registry.npmmirror.com/@types/react/18.2.5
       '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.2.3
       react: registry.npmmirror.com/react/18.2.0
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
+      tslib: registry.npmmirror.com/tslib/2.5.0
     transitivePeerDependencies:
       - scheduler
     dev: false
@@ -315,11 +326,11 @@ packages:
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
     dev: false
 
-  registry.npmmirror.com/@fluentui/react-card/9.0.8_kuusov2leqnirz6kvocub7ct4e:
-    resolution: {integrity: sha512-r/hOOkKRex1GPdh+Bg0ubB3K3hZIQ1gzxnTt9TOsiR4P6eW6RELbbjmAokdHQb27c7HuygVGOLuFPr5gT8E0kQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-card/-/react-card-9.0.8.tgz}
-    id: registry.npmmirror.com/@fluentui/react-card/9.0.8
+  registry.npmmirror.com/@fluentui/react-card/9.0.0-beta.36_kuusov2leqnirz6kvocub7ct4e:
+    resolution: {integrity: sha512-C1A9b3P1eocH7YPrUPSjnhhU4lkd33NTKWGfDZPGzgp9PQrtpbjx1LZxRlEspdc2ip/UNWbYJ2TzN0p2TOQFHQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-card/-/react-card-9.0.0-beta.36.tgz}
+    id: registry.npmmirror.com/@fluentui/react-card/9.0.0-beta.36
     name: '@fluentui/react-card'
-    version: 9.0.8
+    version: 9.0.0-beta.36
     peerDependencies:
       '@types/react': '>=16.8.0 <19.0.0'
       '@types/react-dom': '>=16.8.0 <19.0.0'
@@ -327,16 +338,15 @@ packages:
       react-dom: '>=16.8.0 <19.0.0'
     dependencies:
       '@fluentui/keyboard-keys': registry.npmmirror.com/@fluentui/keyboard-keys/9.0.2
-      '@fluentui/react-jsx-runtime': registry.npmmirror.com/@fluentui/react-jsx-runtime/9.0.0-alpha.2_3pi6y6cylzraaxxtldk4o6b3zi
       '@fluentui/react-tabster': registry.npmmirror.com/@fluentui/react-tabster/9.6.5_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-theme': registry.npmmirror.com/@fluentui/react-theme/9.1.7
       '@fluentui/react-utilities': registry.npmmirror.com/@fluentui/react-utilities/9.8.0_3pi6y6cylzraaxxtldk4o6b3zi
       '@griffel/react': registry.npmmirror.com/@griffel/react/1.5.7_react@18.2.0
-      '@swc/helpers': registry.npmmirror.com/@swc/helpers/0.4.14
       '@types/react': registry.npmmirror.com/@types/react/18.2.5
       '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.2.3
       react: registry.npmmirror.com/react/18.2.0
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
+      tslib: registry.npmmirror.com/tslib/2.5.0
     dev: false
 
   registry.npmmirror.com/@fluentui/react-checkbox/9.1.11_kuusov2leqnirz6kvocub7ct4e:
@@ -398,11 +408,11 @@ packages:
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
     dev: false
 
-  registry.npmmirror.com/@fluentui/react-components/9.19.1_kuusov2leqnirz6kvocub7ct4e:
-    resolution: {integrity: sha512-HHhQdGXHVn0PwrEbFGu/xEqSLVYRf2WfMsG6FVmFBNwSwojB/2/DRWXQPUPL8K2Hzrg5Xon8z3RBP/XrSUFqtw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-components/-/react-components-9.19.1.tgz}
-    id: registry.npmmirror.com/@fluentui/react-components/9.19.1
+  registry.npmmirror.com/@fluentui/react-components/9.7.4_kuusov2leqnirz6kvocub7ct4e:
+    resolution: {integrity: sha512-pn9Nsbp7iG/iVCYp0Xi3Kxa8J5XgW6+ftmoGVXk1097dyqlbxqSAbTyFPoWMHJoohgLoi/+Uf1HWh60/TOIoKg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-components/-/react-components-9.7.4.tgz}
+    id: registry.npmmirror.com/@fluentui/react-components/9.7.4
     name: '@fluentui/react-components'
-    version: 9.19.1
+    version: 9.7.4
     peerDependencies:
       '@types/react': '>=16.8.0 <19.0.0'
       '@types/react-dom': '>=16.8.0 <19.0.0'
@@ -411,54 +421,51 @@ packages:
       scheduler: ^0.19.0 || ^0.20.0
     dependencies:
       '@fluentui/react-accordion': registry.npmmirror.com/@fluentui/react-accordion/9.1.10_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-alert': registry.npmmirror.com/@fluentui/react-alert/9.0.0-beta.45_kuusov2leqnirz6kvocub7ct4e
+      '@fluentui/react-alert': registry.npmmirror.com/@fluentui/react-alert/9.0.0-beta.21_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-avatar': registry.npmmirror.com/@fluentui/react-avatar/9.4.10_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-badge': registry.npmmirror.com/@fluentui/react-badge/9.1.10_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-button': registry.npmmirror.com/@fluentui/react-button/9.3.10_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-card': registry.npmmirror.com/@fluentui/react-card/9.0.8_kuusov2leqnirz6kvocub7ct4e
+      '@fluentui/react-card': registry.npmmirror.com/@fluentui/react-card/9.0.0-beta.36_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-checkbox': registry.npmmirror.com/@fluentui/react-checkbox/9.1.11_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-combobox': registry.npmmirror.com/@fluentui/react-combobox/9.2.11_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-dialog': registry.npmmirror.com/@fluentui/react-dialog/9.5.3_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-divider': registry.npmmirror.com/@fluentui/react-divider/9.2.10_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-field': registry.npmmirror.com/@fluentui/react-field/9.1.1_kuusov2leqnirz6kvocub7ct4e
+      '@fluentui/react-field': registry.npmmirror.com/@fluentui/react-field/9.0.0-alpha.12_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-image': registry.npmmirror.com/@fluentui/react-image/9.1.7_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-infobutton': registry.npmmirror.com/@fluentui/react-infobutton/9.0.0-beta.28_kuusov2leqnirz6kvocub7ct4e
+      '@fluentui/react-infobutton': registry.npmmirror.com/@fluentui/react-infobutton/9.0.0-beta.4_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-input': registry.npmmirror.com/@fluentui/react-input/9.4.11_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-label': registry.npmmirror.com/@fluentui/react-label/9.1.10_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-link': registry.npmmirror.com/@fluentui/react-link/9.0.36_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-menu': registry.npmmirror.com/@fluentui/react-menu/9.7.10_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-overflow': registry.npmmirror.com/@fluentui/react-overflow/9.0.15_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-persona': registry.npmmirror.com/@fluentui/react-persona/9.2.9_kuusov2leqnirz6kvocub7ct4e
+      '@fluentui/react-overflow': registry.npmmirror.com/@fluentui/react-overflow/9.0.0-rc.4_kuusov2leqnirz6kvocub7ct4e
+      '@fluentui/react-persona': registry.npmmirror.com/@fluentui/react-persona/9.1.0-beta.7_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-popover': registry.npmmirror.com/@fluentui/react-popover/9.5.10_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-portal': registry.npmmirror.com/@fluentui/react-portal/9.2.6_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-positioning': registry.npmmirror.com/@fluentui/react-positioning/9.5.10_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-progress': registry.npmmirror.com/@fluentui/react-progress/9.1.11_kuusov2leqnirz6kvocub7ct4e
+      '@fluentui/react-progress': registry.npmmirror.com/@fluentui/react-progress/9.0.0-alpha.9_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-provider': registry.npmmirror.com/@fluentui/react-provider/9.5.4_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-radio': registry.npmmirror.com/@fluentui/react-radio/9.1.11_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-select': registry.npmmirror.com/@fluentui/react-select/9.1.11_kuusov2leqnirz6kvocub7ct4e
+      '@fluentui/react-select': registry.npmmirror.com/@fluentui/react-select/9.0.0-beta.18_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-shared-contexts': registry.npmmirror.com/@fluentui/react-shared-contexts/9.3.3_3pi6y6cylzraaxxtldk4o6b3zi
-      '@fluentui/react-skeleton': registry.npmmirror.com/@fluentui/react-skeleton/9.0.0-beta.10_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-slider': registry.npmmirror.com/@fluentui/react-slider/9.1.11_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-spinbutton': registry.npmmirror.com/@fluentui/react-spinbutton/9.2.11_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-spinner': registry.npmmirror.com/@fluentui/react-spinner/9.1.10_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-switch': registry.npmmirror.com/@fluentui/react-switch/9.1.11_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-table': registry.npmmirror.com/@fluentui/react-table/9.2.7_kuusov2leqnirz6kvocub7ct4e
+      '@fluentui/react-table': registry.npmmirror.com/@fluentui/react-table/9.0.0-alpha.15_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-tabs': registry.npmmirror.com/@fluentui/react-tabs/9.3.11_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-tabster': registry.npmmirror.com/@fluentui/react-tabster/9.6.5_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-text': registry.npmmirror.com/@fluentui/react-text/9.3.7_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-textarea': registry.npmmirror.com/@fluentui/react-textarea/9.3.11_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-theme': registry.npmmirror.com/@fluentui/react-theme/9.1.7
-      '@fluentui/react-toolbar': registry.npmmirror.com/@fluentui/react-toolbar/9.1.11_kuusov2leqnirz6kvocub7ct4e
+      '@fluentui/react-toolbar': registry.npmmirror.com/@fluentui/react-toolbar/9.0.0-rc.2_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-tooltip': registry.npmmirror.com/@fluentui/react-tooltip/9.2.10_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-tree': registry.npmmirror.com/@fluentui/react-tree/9.0.0-beta.12_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-utilities': registry.npmmirror.com/@fluentui/react-utilities/9.8.0_3pi6y6cylzraaxxtldk4o6b3zi
-      '@fluentui/react-virtualizer': registry.npmmirror.com/@fluentui/react-virtualizer/9.0.0-alpha.18_kuusov2leqnirz6kvocub7ct4e
       '@griffel/react': registry.npmmirror.com/@griffel/react/1.5.7_react@18.2.0
-      '@swc/helpers': registry.npmmirror.com/@swc/helpers/0.4.14
       '@types/react': registry.npmmirror.com/@types/react/18.2.5
       '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.2.3
       react: registry.npmmirror.com/react/18.2.0
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
+      tslib: registry.npmmirror.com/tslib/2.5.0
     dev: false
 
   registry.npmmirror.com/@fluentui/react-context-selector/9.1.18_kuusov2leqnirz6kvocub7ct4e:
@@ -535,6 +542,32 @@ packages:
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
     dev: false
 
+  registry.npmmirror.com/@fluentui/react-field/9.0.0-alpha.12_kuusov2leqnirz6kvocub7ct4e:
+    resolution: {integrity: sha512-IDr+nRu+5k89zmY8L7tr41T5PXrEiQ2DbMYEu8QFlewZTNBnHiuRWNLOG08g0dhCdcHAs+IJzIG+hjJ+1sdafw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-field/-/react-field-9.0.0-alpha.12.tgz}
+    id: registry.npmmirror.com/@fluentui/react-field/9.0.0-alpha.12
+    name: '@fluentui/react-field'
+    version: 9.0.0-alpha.12
+    peerDependencies:
+      '@types/react': '>=16.8.0 <19.0.0'
+      '@types/react-dom': '>=16.8.0 <19.0.0'
+      react: '>=16.8.0 <19.0.0'
+      react-dom: '>=16.8.0 <19.0.0'
+    dependencies:
+      '@fluentui/react-context-selector': registry.npmmirror.com/@fluentui/react-context-selector/9.1.18_kuusov2leqnirz6kvocub7ct4e
+      '@fluentui/react-icons': registry.npmmirror.com/@fluentui/react-icons/2.0.201_react@18.2.0
+      '@fluentui/react-label': registry.npmmirror.com/@fluentui/react-label/9.1.10_kuusov2leqnirz6kvocub7ct4e
+      '@fluentui/react-theme': registry.npmmirror.com/@fluentui/react-theme/9.1.7
+      '@fluentui/react-utilities': registry.npmmirror.com/@fluentui/react-utilities/9.8.0_3pi6y6cylzraaxxtldk4o6b3zi
+      '@griffel/react': registry.npmmirror.com/@griffel/react/1.5.7_react@18.2.0
+      '@types/react': registry.npmmirror.com/@types/react/18.2.5
+      '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.2.3
+      react: registry.npmmirror.com/react/18.2.0
+      react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
+      tslib: registry.npmmirror.com/tslib/2.5.0
+    transitivePeerDependencies:
+      - scheduler
+    dev: false
+
   registry.npmmirror.com/@fluentui/react-field/9.1.1_kuusov2leqnirz6kvocub7ct4e:
     resolution: {integrity: sha512-WjqiPAqWPtmeV5CFDLdOUfUQs6sPZrluOwjmqGqoJzNQUlQiH+coCHNtiAmPiWYRIIiSk5FakOlPiPFbp02j1g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-field/-/react-field-9.1.1.tgz}
     id: registry.npmmirror.com/@fluentui/react-field/9.1.1
@@ -598,11 +631,11 @@ packages:
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
     dev: false
 
-  registry.npmmirror.com/@fluentui/react-infobutton/9.0.0-beta.28_kuusov2leqnirz6kvocub7ct4e:
-    resolution: {integrity: sha512-U+lje7/6EdqA7S3utadG+TMkP1jql/WvTrAurIv10Zr+JLu67eckSZn6JKJ9lS9Z8qvysAsdIE4hKMzbtG7w2Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-infobutton/-/react-infobutton-9.0.0-beta.28.tgz}
-    id: registry.npmmirror.com/@fluentui/react-infobutton/9.0.0-beta.28
+  registry.npmmirror.com/@fluentui/react-infobutton/9.0.0-beta.4_kuusov2leqnirz6kvocub7ct4e:
+    resolution: {integrity: sha512-zvwgoxGh/VV5U+rdivHE4/BkkmfMJ0DnW0J57rawhY4+BqS+5BheY243mq3Dk8g+8BtaeAsn7GLlwDsr871MpA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-infobutton/-/react-infobutton-9.0.0-beta.4.tgz}
+    id: registry.npmmirror.com/@fluentui/react-infobutton/9.0.0-beta.4
     name: '@fluentui/react-infobutton'
-    version: 9.0.0-beta.28
+    version: 9.0.0-beta.4
     peerDependencies:
       '@types/react': '>=16.8.0 <19.0.0'
       '@types/react-dom': '>=16.8.0 <19.0.0'
@@ -610,18 +643,16 @@ packages:
       react-dom: '>=16.8.0 <19.0.0'
     dependencies:
       '@fluentui/react-icons': registry.npmmirror.com/@fluentui/react-icons/2.0.201_react@18.2.0
-      '@fluentui/react-jsx-runtime': registry.npmmirror.com/@fluentui/react-jsx-runtime/9.0.0-alpha.2_3pi6y6cylzraaxxtldk4o6b3zi
-      '@fluentui/react-label': registry.npmmirror.com/@fluentui/react-label/9.1.10_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-popover': registry.npmmirror.com/@fluentui/react-popover/9.5.10_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-tabster': registry.npmmirror.com/@fluentui/react-tabster/9.6.5_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-theme': registry.npmmirror.com/@fluentui/react-theme/9.1.7
       '@fluentui/react-utilities': registry.npmmirror.com/@fluentui/react-utilities/9.8.0_3pi6y6cylzraaxxtldk4o6b3zi
       '@griffel/react': registry.npmmirror.com/@griffel/react/1.5.7_react@18.2.0
-      '@swc/helpers': registry.npmmirror.com/@swc/helpers/0.4.14
       '@types/react': registry.npmmirror.com/@types/react/18.2.5
       '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.2.3
       react: registry.npmmirror.com/react/18.2.0
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
+      tslib: registry.npmmirror.com/tslib/2.5.0
     transitivePeerDependencies:
       - scheduler
     dev: false
@@ -745,11 +776,11 @@ packages:
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
     dev: false
 
-  registry.npmmirror.com/@fluentui/react-overflow/9.0.15_kuusov2leqnirz6kvocub7ct4e:
-    resolution: {integrity: sha512-oMbFsR4rVqdNY4neat7YB7Dn9wgy5/h5mAqH6NLKD/25LujZJ8oho+PUT1kOIcCQ/+XpCUU6hCJadd9iCTeNmg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-overflow/-/react-overflow-9.0.15.tgz}
-    id: registry.npmmirror.com/@fluentui/react-overflow/9.0.15
+  registry.npmmirror.com/@fluentui/react-overflow/9.0.0-rc.4_kuusov2leqnirz6kvocub7ct4e:
+    resolution: {integrity: sha512-jonA0nZiG7NhttqE5uKrPi9HwWU92bwffZ+r9MGORdsGPI5yUj7taZIQC4CwQZzTIj4dGEHfKpyfHWewTANacg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-overflow/-/react-overflow-9.0.0-rc.4.tgz}
+    id: registry.npmmirror.com/@fluentui/react-overflow/9.0.0-rc.4
     name: '@fluentui/react-overflow'
-    version: 9.0.15
+    version: 9.0.0-rc.4
     peerDependencies:
       '@types/react': '>=16.8.0 <19.0.0'
       '@types/react-dom': '>=16.8.0 <19.0.0'
@@ -762,18 +793,18 @@ packages:
       '@fluentui/react-theme': registry.npmmirror.com/@fluentui/react-theme/9.1.7
       '@fluentui/react-utilities': registry.npmmirror.com/@fluentui/react-utilities/9.8.0_3pi6y6cylzraaxxtldk4o6b3zi
       '@griffel/react': registry.npmmirror.com/@griffel/react/1.5.7_react@18.2.0
-      '@swc/helpers': registry.npmmirror.com/@swc/helpers/0.4.14
       '@types/react': registry.npmmirror.com/@types/react/18.2.5
       '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.2.3
       react: registry.npmmirror.com/react/18.2.0
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
+      tslib: registry.npmmirror.com/tslib/2.5.0
     dev: false
 
-  registry.npmmirror.com/@fluentui/react-persona/9.2.9_kuusov2leqnirz6kvocub7ct4e:
-    resolution: {integrity: sha512-hEuUl7ke+CsOKrpV9I2GbekbIgVdTJ7Xn2VV7JWjbcW5zp7EM4SRsBez/EAbsycwr/Cm23n7sX0tEcqhMhasTw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-persona/-/react-persona-9.2.9.tgz}
-    id: registry.npmmirror.com/@fluentui/react-persona/9.2.9
+  registry.npmmirror.com/@fluentui/react-persona/9.1.0-beta.7_kuusov2leqnirz6kvocub7ct4e:
+    resolution: {integrity: sha512-KQSJvgKrkqh6D1KpphtmH7FT1rzfDGi/gHhWp/QlN8tQRi1W4Ewgpd6b6PRBvUesC+nSVOe6RHBzuE5UvWLj7A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-persona/-/react-persona-9.1.0-beta.7.tgz}
+    id: registry.npmmirror.com/@fluentui/react-persona/9.1.0-beta.7
     name: '@fluentui/react-persona'
-    version: 9.2.9
+    version: 9.1.0-beta.7
     peerDependencies:
       '@types/react': '>=16.8.0 <19.0.0'
       '@types/react-dom': '>=16.8.0 <19.0.0'
@@ -782,16 +813,14 @@ packages:
     dependencies:
       '@fluentui/react-avatar': registry.npmmirror.com/@fluentui/react-avatar/9.4.10_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-badge': registry.npmmirror.com/@fluentui/react-badge/9.1.10_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-jsx-runtime': registry.npmmirror.com/@fluentui/react-jsx-runtime/9.0.0-alpha.2_3pi6y6cylzraaxxtldk4o6b3zi
-      '@fluentui/react-shared-contexts': registry.npmmirror.com/@fluentui/react-shared-contexts/9.3.3_3pi6y6cylzraaxxtldk4o6b3zi
       '@fluentui/react-theme': registry.npmmirror.com/@fluentui/react-theme/9.1.7
       '@fluentui/react-utilities': registry.npmmirror.com/@fluentui/react-utilities/9.8.0_3pi6y6cylzraaxxtldk4o6b3zi
       '@griffel/react': registry.npmmirror.com/@griffel/react/1.5.7_react@18.2.0
-      '@swc/helpers': registry.npmmirror.com/@swc/helpers/0.4.14
       '@types/react': registry.npmmirror.com/@types/react/18.2.5
       '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.2.3
       react: registry.npmmirror.com/react/18.2.0
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
+      tslib: registry.npmmirror.com/tslib/2.5.0
     transitivePeerDependencies:
       - scheduler
     dev: false
@@ -872,28 +901,27 @@ packages:
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
     dev: false
 
-  registry.npmmirror.com/@fluentui/react-progress/9.1.11_kuusov2leqnirz6kvocub7ct4e:
-    resolution: {integrity: sha512-5cwft6WydcR5kKvDuQ8yMjgaF7crZUbxkE8Bbq9cWdaaLcOcN5GaYSVpJQGBzQJPFUCy5pPn6Vk4to9EE5zqYQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-progress/-/react-progress-9.1.11.tgz}
-    id: registry.npmmirror.com/@fluentui/react-progress/9.1.11
+  registry.npmmirror.com/@fluentui/react-progress/9.0.0-alpha.9_kuusov2leqnirz6kvocub7ct4e:
+    resolution: {integrity: sha512-t2l0ZWCYrSMatqJa3ox+LB8vUibXma4BWcaXae+N4KjWnLgGM1L1eOAO0B8IJHCdYJ+xEFQqbWCUs1Ael4pijA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-progress/-/react-progress-9.0.0-alpha.9.tgz}
+    id: registry.npmmirror.com/@fluentui/react-progress/9.0.0-alpha.9
     name: '@fluentui/react-progress'
-    version: 9.1.11
+    version: 9.0.0-alpha.9
     peerDependencies:
       '@types/react': '>=16.8.0 <19.0.0'
       '@types/react-dom': '>=16.8.0 <19.0.0'
       react: '>=16.8.0 <19.0.0'
       react-dom: '>=16.8.0 <19.0.0'
     dependencies:
-      '@fluentui/react-field': registry.npmmirror.com/@fluentui/react-field/9.1.1_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-jsx-runtime': registry.npmmirror.com/@fluentui/react-jsx-runtime/9.0.0-alpha.2_3pi6y6cylzraaxxtldk4o6b3zi
+      '@fluentui/react-field': registry.npmmirror.com/@fluentui/react-field/9.0.0-alpha.12_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-shared-contexts': registry.npmmirror.com/@fluentui/react-shared-contexts/9.3.3_3pi6y6cylzraaxxtldk4o6b3zi
       '@fluentui/react-theme': registry.npmmirror.com/@fluentui/react-theme/9.1.7
       '@fluentui/react-utilities': registry.npmmirror.com/@fluentui/react-utilities/9.8.0_3pi6y6cylzraaxxtldk4o6b3zi
       '@griffel/react': registry.npmmirror.com/@griffel/react/1.5.7_react@18.2.0
-      '@swc/helpers': registry.npmmirror.com/@swc/helpers/0.4.14
       '@types/react': registry.npmmirror.com/@types/react/18.2.5
       '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.2.3
       react: registry.npmmirror.com/react/18.2.0
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
+      tslib: registry.npmmirror.com/tslib/2.5.0
     transitivePeerDependencies:
       - scheduler
     dev: false
@@ -951,29 +979,27 @@ packages:
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
     dev: false
 
-  registry.npmmirror.com/@fluentui/react-select/9.1.11_kuusov2leqnirz6kvocub7ct4e:
-    resolution: {integrity: sha512-NTJ3UyJJ9Rq+IV0x2b2rhf/AIIES78ASEnlHE8sOQACID5l0eAXt35W2MDbSQi3+PSFlMKbaupHr32lgHp/9Jg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-select/-/react-select-9.1.11.tgz}
-    id: registry.npmmirror.com/@fluentui/react-select/9.1.11
+  registry.npmmirror.com/@fluentui/react-select/9.0.0-beta.18_kuusov2leqnirz6kvocub7ct4e:
+    resolution: {integrity: sha512-1/+/kgMYksRBUbx+URxLNHqh51L/etGV8Dqoy9NKU7OPvI8ZI3bwPXgN8xxDjcusJLUsUy7y+sJqK1juFnUapQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-select/-/react-select-9.0.0-beta.18.tgz}
+    id: registry.npmmirror.com/@fluentui/react-select/9.0.0-beta.18
     name: '@fluentui/react-select'
-    version: 9.1.11
+    version: 9.0.0-beta.18
     peerDependencies:
       '@types/react': '>=16.8.0 <19.0.0'
       '@types/react-dom': '>=16.8.0 <19.0.0'
       react: '>=16.8.0 <19.0.0'
       react-dom: '>=16.8.0 <19.0.0'
     dependencies:
-      '@fluentui/react-field': registry.npmmirror.com/@fluentui/react-field/9.1.1_kuusov2leqnirz6kvocub7ct4e
+      '@fluentui/react-field': registry.npmmirror.com/@fluentui/react-field/9.0.0-alpha.12_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-icons': registry.npmmirror.com/@fluentui/react-icons/2.0.201_react@18.2.0
-      '@fluentui/react-jsx-runtime': registry.npmmirror.com/@fluentui/react-jsx-runtime/9.0.0-alpha.2_3pi6y6cylzraaxxtldk4o6b3zi
-      '@fluentui/react-shared-contexts': registry.npmmirror.com/@fluentui/react-shared-contexts/9.3.3_3pi6y6cylzraaxxtldk4o6b3zi
       '@fluentui/react-theme': registry.npmmirror.com/@fluentui/react-theme/9.1.7
       '@fluentui/react-utilities': registry.npmmirror.com/@fluentui/react-utilities/9.8.0_3pi6y6cylzraaxxtldk4o6b3zi
       '@griffel/react': registry.npmmirror.com/@griffel/react/1.5.7_react@18.2.0
-      '@swc/helpers': registry.npmmirror.com/@swc/helpers/0.4.14
       '@types/react': registry.npmmirror.com/@types/react/18.2.5
       '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.2.3
       react: registry.npmmirror.com/react/18.2.0
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
+      tslib: registry.npmmirror.com/tslib/2.5.0
     transitivePeerDependencies:
       - scheduler
     dev: false
@@ -991,32 +1017,6 @@ packages:
       '@swc/helpers': registry.npmmirror.com/@swc/helpers/0.4.14
       '@types/react': registry.npmmirror.com/@types/react/18.2.5
       react: registry.npmmirror.com/react/18.2.0
-    dev: false
-
-  registry.npmmirror.com/@fluentui/react-skeleton/9.0.0-beta.10_kuusov2leqnirz6kvocub7ct4e:
-    resolution: {integrity: sha512-wkhe2tnH1v8mBdhloPADaPkevmEE2Au441fi4wW1d9ForsUu9NIjUcO5zT7KboqqbNN2fR925BiXvrjsMa6X6g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-skeleton/-/react-skeleton-9.0.0-beta.10.tgz}
-    id: registry.npmmirror.com/@fluentui/react-skeleton/9.0.0-beta.10
-    name: '@fluentui/react-skeleton'
-    version: 9.0.0-beta.10
-    peerDependencies:
-      '@types/react': '>=16.8.0 <19.0.0'
-      '@types/react-dom': '>=16.8.0 <19.0.0'
-      react: '>=16.8.0 <19.0.0'
-      react-dom: '>=16.8.0 <19.0.0'
-    dependencies:
-      '@fluentui/react-field': registry.npmmirror.com/@fluentui/react-field/9.1.1_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-jsx-runtime': registry.npmmirror.com/@fluentui/react-jsx-runtime/9.0.0-alpha.2_3pi6y6cylzraaxxtldk4o6b3zi
-      '@fluentui/react-shared-contexts': registry.npmmirror.com/@fluentui/react-shared-contexts/9.3.3_3pi6y6cylzraaxxtldk4o6b3zi
-      '@fluentui/react-theme': registry.npmmirror.com/@fluentui/react-theme/9.1.7
-      '@fluentui/react-utilities': registry.npmmirror.com/@fluentui/react-utilities/9.8.0_3pi6y6cylzraaxxtldk4o6b3zi
-      '@griffel/react': registry.npmmirror.com/@griffel/react/1.5.7_react@18.2.0
-      '@swc/helpers': registry.npmmirror.com/@swc/helpers/0.4.14
-      '@types/react': registry.npmmirror.com/@types/react/18.2.5
-      '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.2.3
-      react: registry.npmmirror.com/react/18.2.0
-      react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
-    transitivePeerDependencies:
-      - scheduler
     dev: false
 
   registry.npmmirror.com/@fluentui/react-slider/9.1.11_kuusov2leqnirz6kvocub7ct4e:
@@ -1127,11 +1127,11 @@ packages:
       - scheduler
     dev: false
 
-  registry.npmmirror.com/@fluentui/react-table/9.2.7_kuusov2leqnirz6kvocub7ct4e:
-    resolution: {integrity: sha512-3vcCuQLEXsA6gaUG9DsEAoefOKBsMsWCk9SYyOtzwjxFeGQM783vsXE9zTrXyuUABVsieq8CNE+f4IvPrRE9vw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-table/-/react-table-9.2.7.tgz}
-    id: registry.npmmirror.com/@fluentui/react-table/9.2.7
+  registry.npmmirror.com/@fluentui/react-table/9.0.0-alpha.15_kuusov2leqnirz6kvocub7ct4e:
+    resolution: {integrity: sha512-4XHR04MDw/Td9WYzaSUrzTj5YehzVy/C+ym+4ttPQs+ZUEpQEOnsOfyk3QSWS4pCNPFVwkzr1TzjEc0iPPPmmA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-table/-/react-table-9.0.0-alpha.15.tgz}
+    id: registry.npmmirror.com/@fluentui/react-table/9.0.0-alpha.15
     name: '@fluentui/react-table'
-    version: 9.2.7
+    version: 9.0.0-alpha.15
     peerDependencies:
       '@types/react': '>=16.8.0 <19.0.0'
       '@types/react-dom': '>=16.8.0 <19.0.0'
@@ -1144,18 +1144,16 @@ packages:
       '@fluentui/react-checkbox': registry.npmmirror.com/@fluentui/react-checkbox/9.1.11_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-context-selector': registry.npmmirror.com/@fluentui/react-context-selector/9.1.18_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-icons': registry.npmmirror.com/@fluentui/react-icons/2.0.201_react@18.2.0
-      '@fluentui/react-jsx-runtime': registry.npmmirror.com/@fluentui/react-jsx-runtime/9.0.0-alpha.2_3pi6y6cylzraaxxtldk4o6b3zi
       '@fluentui/react-radio': registry.npmmirror.com/@fluentui/react-radio/9.1.11_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-shared-contexts': registry.npmmirror.com/@fluentui/react-shared-contexts/9.3.3_3pi6y6cylzraaxxtldk4o6b3zi
       '@fluentui/react-tabster': registry.npmmirror.com/@fluentui/react-tabster/9.6.5_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-theme': registry.npmmirror.com/@fluentui/react-theme/9.1.7
       '@fluentui/react-utilities': registry.npmmirror.com/@fluentui/react-utilities/9.8.0_3pi6y6cylzraaxxtldk4o6b3zi
       '@griffel/react': registry.npmmirror.com/@griffel/react/1.5.7_react@18.2.0
-      '@swc/helpers': registry.npmmirror.com/@swc/helpers/0.4.14
       '@types/react': registry.npmmirror.com/@types/react/18.2.5
       '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.2.3
       react: registry.npmmirror.com/react/18.2.0
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
+      tslib: registry.npmmirror.com/tslib/2.5.0
     transitivePeerDependencies:
       - scheduler
     dev: false
@@ -1268,11 +1266,11 @@ packages:
       '@swc/helpers': registry.npmmirror.com/@swc/helpers/0.4.14
     dev: false
 
-  registry.npmmirror.com/@fluentui/react-toolbar/9.1.11_kuusov2leqnirz6kvocub7ct4e:
-    resolution: {integrity: sha512-qo6snVMalqHyGEVFpurlcGZDzZPl9wgfg+ajDHGAufrj7mgWkb876RA09vbVnmMu5i5VazcIaoh2hGMcCwkitQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-toolbar/-/react-toolbar-9.1.11.tgz}
-    id: registry.npmmirror.com/@fluentui/react-toolbar/9.1.11
+  registry.npmmirror.com/@fluentui/react-toolbar/9.0.0-rc.2_kuusov2leqnirz6kvocub7ct4e:
+    resolution: {integrity: sha512-Md52PDBprc6jYSwZaATBQNa4V+Fdq6H3yrBy7NkYVQSNYESCpqmqrQHZ9/6bV3fkgui/vlqr0edueb0ia3ZWaQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-toolbar/-/react-toolbar-9.0.0-rc.2.tgz}
+    id: registry.npmmirror.com/@fluentui/react-toolbar/9.0.0-rc.2
     name: '@fluentui/react-toolbar'
-    version: 9.1.11
+    version: 9.0.0-rc.2
     peerDependencies:
       '@types/react': '>=16.8.0 <19.0.0'
       '@types/react-dom': '>=16.8.0 <19.0.0'
@@ -1282,18 +1280,16 @@ packages:
       '@fluentui/react-button': registry.npmmirror.com/@fluentui/react-button/9.3.10_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-context-selector': registry.npmmirror.com/@fluentui/react-context-selector/9.1.18_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-divider': registry.npmmirror.com/@fluentui/react-divider/9.2.10_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-jsx-runtime': registry.npmmirror.com/@fluentui/react-jsx-runtime/9.0.0-alpha.2_3pi6y6cylzraaxxtldk4o6b3zi
       '@fluentui/react-radio': registry.npmmirror.com/@fluentui/react-radio/9.1.11_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-shared-contexts': registry.npmmirror.com/@fluentui/react-shared-contexts/9.3.3_3pi6y6cylzraaxxtldk4o6b3zi
       '@fluentui/react-tabster': registry.npmmirror.com/@fluentui/react-tabster/9.6.5_kuusov2leqnirz6kvocub7ct4e
       '@fluentui/react-theme': registry.npmmirror.com/@fluentui/react-theme/9.1.7
       '@fluentui/react-utilities': registry.npmmirror.com/@fluentui/react-utilities/9.8.0_3pi6y6cylzraaxxtldk4o6b3zi
       '@griffel/react': registry.npmmirror.com/@griffel/react/1.5.7_react@18.2.0
-      '@swc/helpers': registry.npmmirror.com/@swc/helpers/0.4.14
       '@types/react': registry.npmmirror.com/@types/react/18.2.5
       '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.2.3
       react: registry.npmmirror.com/react/18.2.0
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
+      tslib: registry.npmmirror.com/tslib/2.5.0
     transitivePeerDependencies:
       - scheduler
     dev: false
@@ -1324,39 +1320,6 @@ packages:
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
     dev: false
 
-  registry.npmmirror.com/@fluentui/react-tree/9.0.0-beta.12_kuusov2leqnirz6kvocub7ct4e:
-    resolution: {integrity: sha512-dsP7O+TzZm19qn7ad2HyqgZY/csns/8nvDtW5GvueNJg981zQMd7e++rFV4sTPOnmsE+dCF5GlkrV1+/v1BXVg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-tree/-/react-tree-9.0.0-beta.12.tgz}
-    id: registry.npmmirror.com/@fluentui/react-tree/9.0.0-beta.12
-    name: '@fluentui/react-tree'
-    version: 9.0.0-beta.12
-    peerDependencies:
-      '@types/react': '>=16.8.0 <19.0.0'
-      '@types/react-dom': '>=16.8.0 <19.0.0'
-      react: '>=16.8.0 <19.0.0'
-      react-dom: '>=16.8.0 <19.0.0'
-    dependencies:
-      '@fluentui/keyboard-keys': registry.npmmirror.com/@fluentui/keyboard-keys/9.0.2
-      '@fluentui/react-aria': registry.npmmirror.com/@fluentui/react-aria/9.3.18_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-avatar': registry.npmmirror.com/@fluentui/react-avatar/9.4.10_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-button': registry.npmmirror.com/@fluentui/react-button/9.3.10_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-context-selector': registry.npmmirror.com/@fluentui/react-context-selector/9.1.18_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-icons': registry.npmmirror.com/@fluentui/react-icons/2.0.201_react@18.2.0
-      '@fluentui/react-jsx-runtime': registry.npmmirror.com/@fluentui/react-jsx-runtime/9.0.0-alpha.2_3pi6y6cylzraaxxtldk4o6b3zi
-      '@fluentui/react-portal': registry.npmmirror.com/@fluentui/react-portal/9.2.6_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-shared-contexts': registry.npmmirror.com/@fluentui/react-shared-contexts/9.3.3_3pi6y6cylzraaxxtldk4o6b3zi
-      '@fluentui/react-tabster': registry.npmmirror.com/@fluentui/react-tabster/9.6.5_kuusov2leqnirz6kvocub7ct4e
-      '@fluentui/react-theme': registry.npmmirror.com/@fluentui/react-theme/9.1.7
-      '@fluentui/react-utilities': registry.npmmirror.com/@fluentui/react-utilities/9.8.0_3pi6y6cylzraaxxtldk4o6b3zi
-      '@griffel/react': registry.npmmirror.com/@griffel/react/1.5.7_react@18.2.0
-      '@swc/helpers': registry.npmmirror.com/@swc/helpers/0.4.14
-      '@types/react': registry.npmmirror.com/@types/react/18.2.5
-      '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.2.3
-      react: registry.npmmirror.com/react/18.2.0
-      react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
-    transitivePeerDependencies:
-      - scheduler
-    dev: false
-
   registry.npmmirror.com/@fluentui/react-utilities/9.8.0_3pi6y6cylzraaxxtldk4o6b3zi:
     resolution: {integrity: sha512-/FFevf60FAee+zpOpRvOce6Z3XLoTMQiJ6UAvw5c/0z6VJIoF8VvKjv+gKKJ7Paq5cj2tSDxWTL8ARqNjPndeg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-utilities/-/react-utilities-9.8.0.tgz}
     id: registry.npmmirror.com/@fluentui/react-utilities/9.8.0
@@ -1370,27 +1333,6 @@ packages:
       '@swc/helpers': registry.npmmirror.com/@swc/helpers/0.4.14
       '@types/react': registry.npmmirror.com/@types/react/18.2.5
       react: registry.npmmirror.com/react/18.2.0
-    dev: false
-
-  registry.npmmirror.com/@fluentui/react-virtualizer/9.0.0-alpha.18_kuusov2leqnirz6kvocub7ct4e:
-    resolution: {integrity: sha512-CSmfiL1cOa9mSlBLG87QuiYdJcCw4C0QlO5gx6Z6BKDsqFd/MbkNwY6mxSjrQKoZVhkbCT1swwW4Wm9/i0tnyw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fluentui/react-virtualizer/-/react-virtualizer-9.0.0-alpha.18.tgz}
-    id: registry.npmmirror.com/@fluentui/react-virtualizer/9.0.0-alpha.18
-    name: '@fluentui/react-virtualizer'
-    version: 9.0.0-alpha.18
-    peerDependencies:
-      '@types/react': '>=16.8.0 <19.0.0'
-      '@types/react-dom': '>=16.8.0 <19.0.0'
-      react: '>=16.8.0 <19.0.0'
-      react-dom: '>=16.8.0 <19.0.0'
-    dependencies:
-      '@fluentui/react-jsx-runtime': registry.npmmirror.com/@fluentui/react-jsx-runtime/9.0.0-alpha.2_3pi6y6cylzraaxxtldk4o6b3zi
-      '@fluentui/react-utilities': registry.npmmirror.com/@fluentui/react-utilities/9.8.0_3pi6y6cylzraaxxtldk4o6b3zi
-      '@griffel/react': registry.npmmirror.com/@griffel/react/1.5.7_react@18.2.0
-      '@swc/helpers': registry.npmmirror.com/@swc/helpers/0.4.14
-      '@types/react': registry.npmmirror.com/@types/react/18.2.5
-      '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.2.3
-      react: registry.npmmirror.com/react/18.2.0
-      react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
     dev: false
 
   registry.npmmirror.com/@fluentui/tokens/1.0.0-alpha.4:
@@ -1540,6 +1482,12 @@ packages:
     version: 13.4.0
     dependencies:
       glob: registry.npmmirror.com/glob/7.1.7
+    dev: false
+
+  registry.npmmirror.com/@next/font/13.4.1:
+    resolution: {integrity: sha512-GIgdVNXhWgGq92NUSGVd4n2yiF1k0i6U3dt/Pa9SFJvOEJyAJ99khXVq6cYJYJS8jhbL0yjE8+th8h+KjIGzuA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@next/font/-/font-13.4.1.tgz}
+    name: '@next/font'
+    version: 13.4.1
     dev: false
 
   registry.npmmirror.com/@next/swc-darwin-arm64/13.4.0:
@@ -1705,17 +1653,17 @@ packages:
       tslib: registry.npmmirror.com/tslib/2.5.0
     dev: false
 
-  registry.npmmirror.com/@tanstack/query-core/4.29.5:
-    resolution: {integrity: sha512-xXIiyQ/4r9KfaJ3k6kejqcaqFXXBTzN2aOJ5H1J6aTJE9hl/nbgAdfF6oiIu0CD5xowejJEJ6bBg8TO7BN4NuQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@tanstack/query-core/-/query-core-4.29.5.tgz}
+  registry.npmmirror.com/@tanstack/query-core/4.20.4:
+    resolution: {integrity: sha512-lhLtGVNJDsJ/DyZXrLzekDEywQqRVykgBqTmkv0La32a/RleILXy6JMLBb7UmS3QCatg/F/0N9/5b0i5j6IKcA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@tanstack/query-core/-/query-core-4.20.4.tgz}
     name: '@tanstack/query-core'
-    version: 4.29.5
+    version: 4.20.4
     dev: false
 
-  registry.npmmirror.com/@tanstack/react-query/4.29.5_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-F87cibC3s3eG0Q90g2O+hqntpCrudKFnR8P24qkH9uccEhXErnJxBC/AAI4cJRV2bfMO8IeGZQYf3WyYgmSg0w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@tanstack/react-query/-/react-query-4.29.5.tgz}
-    id: registry.npmmirror.com/@tanstack/react-query/4.29.5
+  registry.npmmirror.com/@tanstack/react-query/4.20.4_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-SJRxx13k/csb9lXAJfycgVA1N/yU/h3bvRNWP0+aHMfMjmbyX82FdoAcckDBbOdEyAupvb0byelNHNeypCFSyA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@tanstack/react-query/-/react-query-4.20.4.tgz}
+    id: registry.npmmirror.com/@tanstack/react-query/4.20.4
     name: '@tanstack/react-query'
-    version: 4.29.5
+    version: 4.20.4
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -1726,7 +1674,7 @@ packages:
       react-native:
         optional: true
     dependencies:
-      '@tanstack/query-core': registry.npmmirror.com/@tanstack/query-core/4.29.5
+      '@tanstack/query-core': registry.npmmirror.com/@tanstack/query-core/4.20.4
       react: registry.npmmirror.com/react/18.2.0
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
       use-sync-external-store: registry.npmmirror.com/use-sync-external-store/1.2.0_react@18.2.0
@@ -1758,13 +1706,18 @@ packages:
     resolution: {integrity: sha512-FhpRzf927MNQdRZP0J5DLIdTXhjLYzeUTmLAu69mnVksLH9CJY3IuSeEgbKUki7GQZm0WqDkGzyxju2EZGD2wA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/js-yaml/-/js-yaml-4.0.5.tgz}
     name: '@types/js-yaml'
     version: 4.0.5
-    dev: false
 
   registry.npmmirror.com/@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/json5/-/json5-0.0.29.tgz}
     name: '@types/json5'
     version: 0.0.29
     dev: false
+
+  registry.npmmirror.com/@types/lodash/4.14.194:
+    resolution: {integrity: sha512-r22s9tAS7imvBt2lyHC9B8AGwWnXaYb1tY09oyLkXDs4vArpYJzw09nj8MLx5VfciBPGIb+ZwG0ssYnEPJxn/g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/lodash/-/lodash-4.14.194.tgz}
+    name: '@types/lodash'
+    version: 4.14.194
+    dev: true
 
   registry.npmmirror.com/@types/mdast/3.0.11:
     resolution: {integrity: sha512-Y/uImid8aAwrEA24/1tcRZwpxX3pIFTSilcNDKSPn+Y2iDywSEachzRuvgAYYLR3wpGXAsMbv5lvKLDZLeYPAw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/mdast/-/mdast-3.0.11.tgz}
@@ -3663,6 +3616,12 @@ packages:
     engines: {node: '>= 4'}
     dev: false
 
+  registry.npmmirror.com/immer/9.0.16:
+    resolution: {integrity: sha512-qenGE7CstVm1NrHQbMh8YaSzTZTFNP3zPqr3YU0S0UY441j4bJTg4A2Hh5KAhwgaiU6ZZ1Ar6y/2f4TblnMReQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/immer/-/immer-9.0.16.tgz}
+    name: immer
+    version: 9.0.16
+    dev: false
+
   registry.npmmirror.com/immutable/4.3.0:
     resolution: {integrity: sha512-0AOCmOip+xgJwEVTQj1EfiDDOkPmuyllDuTuEX+DDXUgapLAsBIfkg3sxCYyCEA8mQqZrrxPUGjcOQ2JS3WLkg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/immutable/-/immutable-4.3.0.tgz}
     name: immutable
@@ -5211,11 +5170,11 @@ packages:
       scheduler: registry.npmmirror.com/scheduler/0.23.0
     dev: false
 
-  registry.npmmirror.com/react-hook-form/7.43.9_react@18.2.0:
-    resolution: {integrity: sha512-AUDN3Pz2NSeoxQ7Hs6OhQhDr6gtF9YRuutGDwPQqhSUAHJSgGl2VeY3qN19MG0SucpjgDiuMJ4iC5T5uB+eaNQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-hook-form/-/react-hook-form-7.43.9.tgz}
-    id: registry.npmmirror.com/react-hook-form/7.43.9
+  registry.npmmirror.com/react-hook-form/7.40.0_react@18.2.0:
+    resolution: {integrity: sha512-0rokdxMPJs0k9bvFtY6dbcSydyNhnZNXCR49jgDr/aR03FDHFOK6gfh8ccqB3fl696Mk7lqh04xdm+agqWXKSw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-hook-form/-/react-hook-form-7.40.0.tgz}
+    id: registry.npmmirror.com/react-hook-form/7.40.0
     name: react-hook-form
-    version: 7.43.9
+    version: 7.40.0
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
@@ -5235,11 +5194,11 @@ packages:
     version: 18.2.0
     dev: false
 
-  registry.npmmirror.com/react-markdown/8.0.7_3pi6y6cylzraaxxtldk4o6b3zi:
-    resolution: {integrity: sha512-bvWbzG4MtOU62XqBx3Xx+zB2raaFFsq4mYiAzfjXJMEz2sixgeAfraA3tvzULF02ZdOMUOKTBFFaZJDDrq+BJQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-markdown/-/react-markdown-8.0.7.tgz}
-    id: registry.npmmirror.com/react-markdown/8.0.7
+  registry.npmmirror.com/react-markdown/8.0.4_3pi6y6cylzraaxxtldk4o6b3zi:
+    resolution: {integrity: sha512-2oxHa6oDxc1apg/Gnc1Goh06t3B617xeywqI/92wmDV9FELI6ayRkwge7w7DoEqM0gRpZGTNU6xQG+YpJISnVg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-markdown/-/react-markdown-8.0.4.tgz}
+    id: registry.npmmirror.com/react-markdown/8.0.4
     name: react-markdown
-    version: 8.0.7
+    version: 8.0.4
     peerDependencies:
       '@types/react': '>=16'
       react: '>=16'
@@ -5257,7 +5216,7 @@ packages:
       remark-parse: registry.npmmirror.com/remark-parse/10.0.1
       remark-rehype: registry.npmmirror.com/remark-rehype/10.1.0
       space-separated-tokens: registry.npmmirror.com/space-separated-tokens/2.0.2
-      style-to-object: registry.npmmirror.com/style-to-object/0.4.1
+      style-to-object: registry.npmmirror.com/style-to-object/0.3.0
       unified: registry.npmmirror.com/unified/10.1.2
       unist-util-visit: registry.npmmirror.com/unist-util-visit/4.1.2
       vfile: registry.npmmirror.com/vfile/5.3.7
@@ -5746,10 +5705,10 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  registry.npmmirror.com/style-to-object/0.4.1:
-    resolution: {integrity: sha512-HFpbb5gr2ypci7Qw+IOhnP2zOU7e77b+rzM+wTzXzfi1PrtBCX0E7Pk4wL4iTLnhzZ+JgEGAhX81ebTg/aYjQw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/style-to-object/-/style-to-object-0.4.1.tgz}
+  registry.npmmirror.com/style-to-object/0.3.0:
+    resolution: {integrity: sha512-CzFnRRXhzWIdItT3OmF8SQfWyahHhjq3HwcMNCNLn+N7klOOqPjMeG/4JSu77D7ypZdGvSzvkrbyeTMizz2VrA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/style-to-object/-/style-to-object-0.3.0.tgz}
     name: style-to-object
-    version: 0.4.1
+    version: 0.3.0
     dependencies:
       inline-style-parser: registry.npmmirror.com/inline-style-parser/0.1.1
     dev: false
@@ -5967,6 +5926,13 @@ packages:
     name: ts-interface-checker
     version: 0.1.13
     dev: true
+
+  registry.npmmirror.com/ts-md5/1.3.1:
+    resolution: {integrity: sha512-DiwiXfwvcTeZ5wCE0z+2A9EseZsztaiZtGrtSaY5JOD7ekPnR/GoIVD5gXZAlK9Na9Kvpo9Waz5rW64WKAWApg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ts-md5/-/ts-md5-1.3.1.tgz}
+    name: ts-md5
+    version: 1.3.1
+    engines: {node: '>=12'}
+    dev: false
 
   registry.npmmirror.com/tsconfig-paths/3.14.2:
     resolution: {integrity: sha512-o/9iXgCYc5L/JxCHPe3Hvh8Q/2xm5Z+p18PESBU6Ff33695QnCHBEjcytY2q19ua7Mbl/DavtBOLq+oG0RCL+g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tsconfig-paths/-/tsconfig-paths-3.14.2.tgz}
@@ -6361,11 +6327,11 @@ packages:
     version: 3.21.4
     dev: false
 
-  registry.npmmirror.com/zustand/4.3.8_react@18.2.0:
-    resolution: {integrity: sha512-4h28KCkHg5ii/wcFFJ5Fp+k1J3gJoasaIbppdgZFO4BPJnsNxL0mQXBSFgOgAdCdBj35aDTPvdAJReTMntFPGg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/zustand/-/zustand-4.3.8.tgz}
-    id: registry.npmmirror.com/zustand/4.3.8
+  registry.npmmirror.com/zustand/4.1.5_immer@9.0.16+react@18.2.0:
+    resolution: {integrity: sha512-PsdRT8Bvq22Yyh1tvpgdHNE7OAeFKqJXUxtJvj1Ixw2B9O2YZ1M34ImQ+xyZah4wZrR4lENMoDUutKPpyXCQ/Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/zustand/-/zustand-4.1.5.tgz}
+    id: registry.npmmirror.com/zustand/4.1.5
     name: zustand
-    version: 4.3.8
+    version: 4.1.5
     engines: {node: '>=12.7.0'}
     peerDependencies:
       immer: '>=9.0'
@@ -6376,6 +6342,7 @@ packages:
       react:
         optional: true
     dependencies:
+      immer: registry.npmmirror.com/immer/9.0.16
       react: registry.npmmirror.com/react/18.2.0
       use-sync-external-store: registry.npmmirror.com/use-sync-external-store/1.2.0_react@18.2.0
     dev: false

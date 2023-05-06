@@ -113,12 +113,7 @@ function FrontPage() {
         </div>
       )}
       {isSuccess && pgsqlLists?.data?.items?.length !== 0 && (
-        <div
-          className={clsx(
-            'grow',
-            styles.scrollWrap,
-            currentApp?.size === 'maxmin' ? 'mx-8' : 'mx-40 '
-          )}>
+        <div className={clsx('grow', styles.scrollWrap, 'appSize')}>
           <div className={clsx('w-full  py-8 absolute')}>
             <div className="table w-full">
               <div className={styles.tableHeader}>
