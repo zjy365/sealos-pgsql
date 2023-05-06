@@ -84,7 +84,7 @@ export const ControlledNumberField: FC<HookFormProps> = (props) => {
           defaultValue={props.defaultValue || ''}
           min={1}
           value={value}
-          onChange={(e: any, data: any) => {
+          onChange={(e, data) => {
             if (data.value) {
               onChange(data.value);
             } else {

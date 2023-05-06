@@ -15,7 +15,7 @@ import {
 import { PageType, usePgSqlContext } from './index';
 import { generatePgsqlTemplate, TPgSqlForm } from './pgsql_common';
 
-export default function AddPage() {
+function AddPage() {
   const { toPage } = usePgSqlContext();
   const [yamlTemplate, setYamlTemplate] = useState('');
 
@@ -96,7 +96,7 @@ export default function AddPage() {
           </Button>
         </div>
       </div>
-      <div className={clsx('flex-1 flex', 'appSize')}>
+      <div className={clsx('flex-1 flex', 'appSizeMargin')}>
         <div className={clsx(styles.pgsqlFormScroll, 'mt-6')}>
           <div className={clsx('w-full absolute pb-6')}>
             <div className={styles.cardName}>
@@ -167,9 +167,7 @@ export default function AddPage() {
                     control={control}
                     name={`users.${index}.name`}
                     placeholder="user name"
-                    rules={{
-                      required: { value: true, message: 'this is required' }
-                    }}
+                    rules={{ required: { value: true, message: 'this is required' } }}
                   />
                   <div className="w-6"></div>
                   <div className="w-full">
@@ -227,9 +225,7 @@ export default function AddPage() {
                     control={control}
                     name={`dataBases.${index}.name`}
                     placeholder="databases name ( 3-32 )"
-                    rules={{
-                      required: { value: true, message: 'this is required' }
-                    }}
+                    rules={{ required: { value: true, message: 'this is required' } }}
                   />
 
                   <div className="w-6"></div>
@@ -321,3 +317,5 @@ export default function AddPage() {
     </div>
   );
 }
+
+export default AddPage;

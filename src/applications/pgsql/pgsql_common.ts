@@ -1,82 +1,82 @@
 export type TPgsqlDetail = {
   metadata: {
-    name: string
-    creationTimestamp: string
-    uid: string
-    namespace: string
-  }
+    name: string;
+    creationTimestamp: string;
+    uid: string;
+    namespace: string;
+  };
   spec: {
     postgresql: {
-      version: string
-    }
+      version: string;
+    };
     volume: {
-      size: string
-    }
+      size: string;
+    };
     resources: {
-      limits: { cpu: string; memory: string }
-      requests: { cpu: string; memory: string }
-    }
-    teamId: string
-    numberOfInstances: number
-    databases: any
-    users: any
-  }
+      limits: { cpu: string; memory: string };
+      requests: { cpu: string; memory: string };
+    };
+    teamId: string;
+    numberOfInstances: number;
+    databases: any;
+    users: any;
+  };
   status: {
-    PostgresClusterStatus: string
-  }
-}
+    PostgresClusterStatus: string;
+  };
+};
 
 export type TPgSqlForm = {
-  pgsqlName: string
-  version: string
-  instance: string
-  volumeSize: string
-  iops: string
-  througput: string
-  users: any[]
-  dataBases: { name: string; user: string }[]
+  pgsqlName: string;
+  version: string;
+  instance: string;
+  volumeSize: string;
+  iops: string;
+  througput: string;
+  users: any[];
+  dataBases: { name: string; user: string }[];
   requests: {
-    cpu: string
-    memory: string
-  }
+    cpu: string;
+    memory: string;
+  };
   limits: {
-    cpu: string
-    memory: string
-  }
-  oddHost: string
-}
+    cpu: string;
+    memory: string;
+  };
+  oddHost: string;
+};
 
 export enum EPgsqlStatus {
   Running = 'Running',
   Creating = 'Creating',
   Failed = 'CreateFailed',
-  EmptyStatus = 'EmptyStatus',
+  EmptyStatus = 'EmptyStatus'
 }
 
 export enum EPgsqlLists {
   Pending,
-  Running,
+  Running
 }
 
 type TUser = {
-  name: string
-  authority: []
-}
+  name: string;
+  authority: [];
+};
 
 type TDataBase = {
-  name: string
-  user: string
-}
+  name: string;
+  user: string;
+};
 
 export const generatePgsqlTemplate = (pgsqlForm: any) => {
-  let user = ''
+  let user = '';
   pgsqlForm.users.forEach((item: TUser) => {
-    user += `${item.name}: [${item.authority}]\n    `
-  })
-  let dataBase = ''
+    user += `${item.name}: [${item.authority}]\n    `;
+  });
+  let dataBase = '';
   pgsqlForm.dataBases.forEach((item: TDataBase) => {
-    dataBase += `${item.name}: ${item.user}\n    `
-  })
+    dataBase += `${item.name}: ${item.user}\n    `;
+  });
 
   const text = `\`\`\`yaml
 kind: "postgresql"
@@ -106,6 +106,6 @@ spec:
     limits:
       cpu: ${pgsqlForm.limits.cpu}m
       memory: ${pgsqlForm.limits.memory}Mi
-\`\`\``
-  return text
-}
+\`\`\``;
+  return text;
+};
